@@ -13,6 +13,8 @@
 
 @implementation CordovaHttpPlugin {
     AFSecurityPolicy *securityPolicy;
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesDomainName = NO;
 }
 
 - (void)pluginInitialize {

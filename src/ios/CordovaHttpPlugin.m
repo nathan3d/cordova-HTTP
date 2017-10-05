@@ -13,12 +13,12 @@
 
 @implementation CordovaHttpPlugin {
     AFSecurityPolicy *securityPolicy;
-    securityPolicy.allowInvalidCertificates = YES;
-    securityPolicy.validatesDomainName = NO;
 }
 
 - (void)pluginInitialize {
     securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    securityPolicy.allowInvalidCertificates = YES;
+    securityPolicy.validatesDomainName = NO;
 }
 
 - (void)setRequestHeaders:(NSDictionary*)headers forManager:(AFHTTPSessionManager*)manager {
